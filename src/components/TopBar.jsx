@@ -26,7 +26,7 @@ export default function TopBar() {
   return (
     <header className="topbar">
       <Link to="/" className="brand">
-        Maximiliano Uribe
+        Maximiliano Uribe Falcon
       </Link>
 
       <div className="bookclub" ref={wrapRef}>
