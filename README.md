@@ -1,18 +1,40 @@
 # Personal Website
 
-A minimal static personal website hosted on GitHub Pages.
+A personal website built with [React](https://react.dev) and [Vite](https://vitejs.dev), deployed to GitHub Pages.
 
-## Local preview
+Live: https://maximilianouribe.github.io
 
-Open `index.html` in your browser, or run a local server:
+## Develop locally
 
 ```sh
-python3 -m http.server 8000
+npm install      # first time only
+npm run dev      # start dev server (hot reload) at http://localhost:5173
 ```
 
-Then visit http://localhost:8000
+## Build
 
-## Files
+```sh
+npm run build    # outputs static files to dist/
+npm run preview  # preview the production build locally
+```
 
-- `index.html` — the page
-- `style.css` — styling
+## Deploy
+
+Deployment is automatic. Every push to the `main` branch triggers the
+GitHub Actions workflow in `.github/workflows/deploy.yml`, which builds the
+site and publishes `dist/` to GitHub Pages.
+
+```sh
+git add .
+git commit -m "Your message"
+git push
+```
+
+## Project structure
+
+- `index.html` — Vite HTML entry point
+- `src/main.jsx` — React app bootstrap
+- `src/App.jsx` — main page component
+- `src/index.css` — global styles
+- `src/App.css` — page/component styles
+- `vite.config.js` — Vite configuration
