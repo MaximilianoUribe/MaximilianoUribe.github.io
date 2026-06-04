@@ -1,19 +1,16 @@
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout.jsx'
+import Home from './pages/Home.jsx'
+import BookClub from './pages/BookClub.jsx'
 import './App.css'
 
 export default function App() {
   return (
-    <main className="app">
-      <h1>Max</h1>
-      <p className="tagline">Personal website</p>
-      <nav>
-        <a
-          href="https://github.com/MaximilianoUribe"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
-      </nav>
-    </main>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/book-club" element={<BookClub />} />
+      </Routes>
+    </Layout>
   )
 }
