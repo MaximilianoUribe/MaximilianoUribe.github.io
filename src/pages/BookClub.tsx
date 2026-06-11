@@ -1,5 +1,11 @@
+type Book = {
+  title: string
+  author: string
+  cover: string
+}
+
 // Add more books to this array and they'll flow into the grid automatically.
-const books = [
+const books: Book[] = [
   {
     title: 'White Nights',
     author: 'Fyodor Dostoevsky',

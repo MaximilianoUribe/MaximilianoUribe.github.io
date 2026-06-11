@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom'
 
 export default function TopBar() {
   const [open, setOpen] = useState(false)
-  const wrapRef = useRef(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
 
   // Close the popover when clicking outside or pressing Escape
   useEffect(() => {
-    function onClick(e) {
-      if (wrapRef.current && !wrapRef.current.contains(e.target)) {
+    function onClick(e: MouseEvent) {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
         setOpen(false)
       }
     }
-    function onKey(e) {
+    function onKey(e: KeyboardEvent) {
       if (e.key === 'Escape') setOpen(false)
     }
     document.addEventListener('mousedown', onClick)

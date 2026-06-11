@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
-import Layout from './components/Layout.jsx'
-import Home from './pages/Home.jsx'
-import BookClub from './pages/BookClub.jsx'
+import Layout from './components/Layout.tsx'
+import Home from './pages/Home.tsx'
+import BookClub from './pages/BookClub.tsx'
 import './App.css'
 
 export default function App() {
